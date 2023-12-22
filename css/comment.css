@@ -1,0 +1,483 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.sec14Title {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 3.5%;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width:548px) {
+    .sec14Title {
+        font-size: 1rem;
+        padding-bottom: 2%;
+    }
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10000;
+}
+
+.comment_box {
+    width: 100%;
+    height: 60%;
+    /* max-width: 750px; */
+    margin: 0 auto;
+    /* overflow: hidden; */
+    font-family: 'Noto Sans TC', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 5%;
+}
+
+.filter_title {
+    position: absolute;
+    width: 80%;
+    top: 8%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filterbox {
+    width: 95%;
+    display: inline-flex;
+    padding: 2%;
+    border: 1px solid #AE0504;
+    border-radius: 10px;
+    margin: 0 3% 0 2%;
+}
+
+.addComment {
+    width: 100%;
+    /* flex-grow: 1 */
+    margin-left: -2%;
+    /* width: 100px; */
+    /* height: 50px; */
+    /* border-radius: 10px; */
+}
+
+.form-floating:nth-child(2) {
+    margin: 0 10px;
+}
+
+.content {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    position: relative;
+}
+
+.card {
+    background-color: #fff0 !important;
+    border: none !important;
+}
+
+.renew {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 80%;
+}
+
+#recipeCarousel {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+#recipeCarousel .carousel-inner,
+#recipeCarousel .carousel-inner .carousel-item,
+#recipeCarousel .carousel-inner .carousel-item .col-12 {
+    height: 100%;
+}
+
+.carousel-inner {
+    position: absolute;
+    width: 100%;
+    height: 82% !important;
+    left: 50%;
+    top: 6%;
+    padding: 2%;
+    transform: translateX(-50%);
+}
+
+.carousel-control-prev {
+    width: 1% !important;
+    left: 12% !important;
+}
+
+.carousel-control-next {
+    width: 1% !important;
+    right: 12% !important;
+}
+
+.hide {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
+
+.xmark {
+    position: absolute;
+    right: 10% !important;
+    top: 5% !important;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.chevron {
+    font-size: 40px;
+}
+
+.modal {
+    z-index: 99999;
+}
+
+.modal-body {
+    z-index: 99999;
+    padding: 0rem !important;
+}
+
+.btn-close {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+    /* z-index: 99; */
+    font-size: 22px;
+    opacity: 1 !important;
+}
+
+.outer_form {
+    width: 100%;
+    background: rgb(126, 126, 126);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #F2F4F7;
+    border-radius: 10px;
+    z-index: 999;
+    position: relative;
+    padding: 10% 0 5% 0;
+}
+
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+input,
+label {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.starbox {
+    position: relative;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars input:checked~label {
+    -webkit-animation: wobble 0.8s ease-out;
+    animation: wobble 0.8s ease-out;
+    color: #fbc416;
+}
+
+.stars label {
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    padding: 2px;
+    cursor: pointer;
+    color: #3d3d3d;
+    transition: color 0.1s ease-out;
+    z-index: 9;
+    margin-right: 5px;
+}
+
+.render {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.bg--comment {
+    background: #fff;
+    color: #000;
+    width: 70%;
+    height: 100%;
+    border: 1px solid #AE7C0D;
+    padding: 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: left;
+}
+
+.gender_icon {
+    display: inline-block;
+    width: 50px;
+    margin-right: 3%;
+}
+
+.card-mb {
+    margin-bottom: 4.5%;
+}
+
+.card-flex {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.card-name {
+    font-size: 1.5rem;
+}
+
+.card-sat {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.card-txt {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
+.reload {
+    position: absolute;
+    width: 120%;
+    height: 110%;
+    top: -5%;
+    left: -10%;
+    background: rgb(232, 232, 232);
+    display: none;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.box_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle_animate {
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgb(232, 232, 232);
+    border: 10px solid #3a3;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    animation: circle 0.75s infinite linear;
+}
+
+.new {
+    background: rgb(255, 171, 171);
+}
+
+.satStars {
+    color: #fbc416;
+}
+
+.filterbox .form-select {
+    font-size: 1.5rem !important;
+    vertical-align: top;
+}
+
+.fourStars::after {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099";
+}
+
+
+/* 旋轉動畫 */
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* 星星抖動 */
+
+@-webkit-keyframes wobble {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    20% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    40% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    60% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    80% {
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes wobble {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+    20% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    40% {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    60% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    80% {
+        -webkit-transform: scale(0.96);
+        transform: scale(0.96);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+/* RWD */
+
+@media (max-width: 768px) {
+    .xmark {
+        right: 8% !important;
+        top: 4% !important;
+        font-size: 32px;
+    }
+    .stars label {
+        font-size: 32px;
+        margin-right: 0;
+    }
+    .filterbox {
+        margin-left: 2%;
+    }
+    .filterbox .form-select {
+        padding: 0 !important;
+        padding-left: .4rem !important;
+        background-position: right 0.1rem center !important;
+        font-size: 1rem !important;
+    }
+    .addComment {
+        width: 95%;
+        margin-left: 0%;
+    }
+}
+
+@media (max-width:568px) {
+    #recipeCarousel {
+        height: 90%;
+    }
+    .chevron {
+        font-size: 24px;
+    }
+    .carousel-control-prev {
+        left: 10% !important;
+    }
+    .carousel-control-next {
+        right: 10% !important;
+    }
+    .bg--comment {
+        width: 76%;
+        height: 95%;
+    }
+    .gender_icon {
+        width: 10%;
+    }
+    .card-mb {
+        margin-bottom: 0%;
+    }
+    .card-name {
+        font-size: 1rem;
+    }
+    .card-sat {
+        font-size: 1.25rem;
+    }
+    .card-txt {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+}

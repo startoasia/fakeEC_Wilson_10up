@@ -1,0 +1,128 @@
+/* 開闔 */
+
+.collapse__Btn {
+    cursor: pointer;
+}
+
+.collapse__Content {
+    transition: max-height .3s;
+    max-height: 0;
+    overflow: hidden;
+}
+
+
+/* 彈窗 */
+
+.popUp__Btn {
+    cursor: pointer;
+}
+
+.popUp__Content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.8);
+    z-index: 10001;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    /* cursor: pointer; */
+    overflow-y: scroll;
+}
+
+.popUp__Content .popUp__Innerbox {
+    width: 90%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 0%;
+    transform: translateX(-50%);
+    margin-top: 5%;
+}
+
+.popUp__Content .popUp__Innerbox img {
+    width: 100%;
+    /* position: relative; */
+}
+
+.popUp__Content.popUp--active {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.closeBox {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.closeBtn {
+    font-size: 50px;
+    transition: all 0.3s;
+}
+
+.closeBox:hover>.closeBtn {
+    transform: rotate(90deg);
+}
+
+
+/* 關閉按鈕顏色 */
+
+.closeBox1 {
+    background: #fff;
+    color: #FF2879;
+}
+
+.closeBox1:hover {
+    background: #FF2879;
+    color: #fff;
+}
+
+.closeBox2 {
+    background: #fff;
+    color: #0c659e;
+}
+
+.closeBox2:hover {
+    background: #0c659e;
+    color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+    .closeBox {
+        width: 40px;
+        height: 40px;
+    }
+    .closeBtn {
+        font-size: 40px;
+    }
+}
+
+
+/* swiper */
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: '';
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+    width: 100%;
+    height: 100%;
+}
